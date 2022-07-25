@@ -1,0 +1,4 @@
+/* pages/musicList/musicList.wxss */
+image {
+  width: 100%;
+}

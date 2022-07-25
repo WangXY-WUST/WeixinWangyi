@@ -1,0 +1,27 @@
+
+.title {
+  color: #D1D4D7;
+  margin-left: 20rpx;
+  font-weight: 800;
+}
+ .center {
+  height: 80rpx;
+  font-weight: 800;
+}
+ .center text:first-child{
+  line-height: 20rpx;
+  vertical-align: top;
+  text-align: center;
+  float: left;
+  margin-left: 20rpx;
+}
+ .center text:last-child {
+  float:right;
+  border: 2rpx solid #000;
+  border-radius: 20rpx;
+  height: 50rpx;
+  width: 150rpx;
+  text-align: center;
+  margin-right: 15rpx;
+  margin-top: 15rpx;
+}

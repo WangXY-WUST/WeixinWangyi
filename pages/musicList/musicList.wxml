@@ -1,0 +1,7 @@
+<image src="/static/images/recommendSong.jpg" mode="widthFix"></image>
+<view class="list">
+  <view class="listItem" wx:for="musicList" wx:key="id">
+    <image src="item.picUrl"></image>
+    <text></text>
+  </view>
+</view>

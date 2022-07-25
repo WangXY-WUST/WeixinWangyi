@@ -1,0 +1,86 @@
+/* pages/home/home.wxss */
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15rpx;
+}
+.headerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerItem image {
+  height: 50rpx;
+  width: 50rpx;
+  padding-top: 25rpx;
+  padding-left: 25rpx;
+}
+.headerItem .img {
+  height: 100rpx;
+  width: 100rpx;
+  background-color: #EC4141;
+  border-radius: 50%;
+}
+.recommendMusic {
+  margin-top: 20px;
+}
+.recommendMusic .centerMusic {
+  display: flex;
+  height: 300rpx;
+
+}
+.recommendMusic .centerMusic .centerMusicItem {
+  display: flex;
+  flex-direction: column;
+  height: 350rpx;
+}
+.recommendMusic .centerMusic .centerMusicItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  margin: 0 10rpx;
+}
+.recommendMusic .centerMusic .centerMusicItem text {
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.musicTop {
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+}
+.musicTop .topSwiper {
+  display: flex;
+  flex-direction: column;
+  height: 400rpx;
+
+}
+.musicTop .topSwiper .title {
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+.musicTop .topSwiper .topMusicItem  {
+  display: flex;
+  margin-top: 15rpx;
+
+}
+.musicTop .topSwiper .topMusicItem image {
+  height: 100rpx;
+  width: 100rpx;
+}
+.musicTop .topSwiper .topMusicItem text {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
