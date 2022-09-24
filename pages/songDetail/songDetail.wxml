@@ -1,0 +1,42 @@
+<view class="container">
+  <text>{{songDetail[0].ar[0].name}}</text>
+  <view class="needleContainer">
+    <view class = 'cir'></view>
+    <image class="needle {{isPlay?'needleActive':''}}" src="/static/images/song/needle.png"></image>
+  </view>
+  <view class="discContainer {{isPlay?'discAnimation':''}}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="pic" src="{{songDetail[0].al.picUrl}}"></image>
+  </view>
+  <!-- 进度条 -->
+  <view class="speed">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="speedLine">
+    <!-- 播放进度条 -->
+      <view class="currentLine" style="width: {{width + 'rpx'}};">
+      <!-- 播放进度条的小圆球 -->
+        <view class="smallCir"></view>
+      </view>
+    </view>
+    <text>{{finalTime}}</text>
+  </view>
+
+  <!-- 播放 下一首图标处 -->
+  <view class="buttomIcon">
+    <image class = 'image' mode="widthFix" src="/static/detailicon/循环.png"></image>
+    <image 
+      class = 'image' 
+      mode="widthFix" 
+      src="/static/detailicon/上一首 上一个.png"
+      id  = 'pre'
+      bindtap="changeMusic"></image>
+    <image 
+      class = 'image big' 
+      mode="widthFix" 
+      src="{{isPlay?'/static/detailicon/暂停.png':'/static/detailicon/24gl-playCircle.png'}}"
+      bindtap="handleMusicPlay"></image>
+    <image class = 'image' mode="widthFix" src="/static/detailicon/下一个 下一首.png" id = 'next' bindtap="changeMusic"></image>
+    <image class = 'image' mode="widthFix" src="/static/detailicon/分类.png"></image>
+  </view>
+</view>

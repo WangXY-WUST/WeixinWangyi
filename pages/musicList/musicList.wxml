@@ -1,7 +1,25 @@
-<image src="/static/images/recommendSong.jpg" mode="widthFix"></image>
-<view class="list">
-  <view class="listItem" wx:for="musicList" wx:key="id">
-    <image src="item.picUrl"></image>
-    <text></text>
+<view>
+  <view class="header">
+    <image src="/static/images/recommendSong.jpg" ></image>
+    <view class="date">
+      <text class="mon">{{mon + '/'}}</text>
+      <text class="day">{{day}}</text>
+    </view>
+  </view>
+  <view class="list">
+    <view class="listHeader">
+      <text>播放全部</text>
+      <text class="more">多选</text>
+    </view>
+    <scroll-view scroll-y class="listScroll">
+      <view class="listItem" wx:for="{{musicList}}" wx:key="id" data-index = "{{index}}" data-songid="{{item}}" bindtap="toSongDetail">
+        <image src="{{item.album.picUrl}}"></image>
+        <view class="song">
+          <text class="songName">{{item.name}}</text>
+          <text class="singName">{{item.album.artists[0].name}}</text>
+        </view>
+        <image class ='more' src="/static/videoicon/more.png"></image>
+      </view>
+    </scroll-view>
   </view>
 </view>

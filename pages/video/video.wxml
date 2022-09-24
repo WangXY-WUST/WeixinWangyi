@@ -1,2 +1,62 @@
-<!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="/static/images/video/video.jpg"></image>
+    <navigator class="search" url="/pages/search/search">搜索音乐</navigator>
+    <image src="/static/images/logo.png"></image>
+  </view>
+  <!-- 导航区 -->
+  <scroll-view 
+    scroll-x class="navScroll" 
+    enable-flex="true"
+    scroll-into-view="{{'scroll' + navId}}"
+    scroll-with-animation
+    >
+    <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{videoList}}" wx:key="id">
+      <view class="navContent {{navId === item.id?'active':''}}" bindtap="handleBindTap" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 视频区 -->
+  <scroll-view 
+      scroll-y="true" 
+      class="videoScroll" 
+      bindrefresherrefresh="handleRefresh" 
+      refresher-enabled
+      refresher-triggered="{{isFresh}}"
+      bindscrolltolower="">
+    <view class="videoItem" wx:for="{{videoGroup}}" wx:key="id">
+      <video 
+        src="{{item.data.urlInfo.url}}" 
+        id="{{item.data.vid}}" 
+        bindplay = "handlePlay"
+        poster="{{item.data.coverUrl}}"
+        class="common"
+        wx:if="{{videoId === item.data.vid}}"
+        object-fit="fill"
+        bindtimeupdate="handleTimeUpdate"
+        bindended="handleEnd"></video>
+        <!-- 性能优化，使用image图片代替video标签 -->
+        <image wx:else bindtap="handlePlay" id="{{item.data.vid}}" src="{{item.data.coverUrl}}" class="common"></image>
+      <view class="content">{{item.data.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <image src="/static/videoicon/love.png"></image>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <image src="/static/videoicon/message.png"></image>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <image src="/static/videoicon/more.png"></image>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

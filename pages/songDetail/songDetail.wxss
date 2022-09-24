@@ -1,0 +1,129 @@
+/* pages/songDetail/songDetail.wxss */
+.container {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 底座 */
+.cir {
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  margin: 10rpx auto;
+}
+/* 摇杆 */
+.needle {
+  z-index: 99;
+  height: 274rpx;
+  width: 192rpx;
+  position: relative;
+  top: -40rpx;
+  left:60rpx;
+  /* 旋转中心点 */
+  transform-origin: 30rpx 0;
+  /* 起始位置 */
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+.needleActive {
+  /* 开始播放后的位置 */
+  transform: rotate(0);
+}
+.discContainer {
+  position: relative;
+
+  width: 598rpx;
+  height: 598rpx;
+  top: -170rpx;
+}
+/* 磁盘动画 */
+.discAnimation {
+  animation: disc 4s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes disc{
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 圆盘 */
+.disc {
+
+  width: 598rpx;
+  height: 598rpx;
+}
+/* 内部图片 */
+.pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto ;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+/* 进度条处 */
+.speed {
+  width: 640rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 180rpx;
+}
+.speedLine {
+  position: relative;
+  height: 4rpx;
+  width: 450rpx;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.4);
+}
+.currentLine {
+  top: 0;
+  left: 0;
+  height: 4rpx;
+  position: absolute;
+  background: red;
+}
+.smallCir {
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  background: #fff;
+  right:-6rpx;
+  border-radius: 50%;
+  top: -3rpx;
+}
+
+
+
+/* 切歌处 */
+.buttomIcon{
+  width: 100%;
+  position: absolute;
+  bottom: 50rpx;
+  border-top: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttomIcon .image {
+  margin-top: 30rpx;
+  width: 60rpx;
+}
+.buttomIcon .big {
+  height: 80rpx;
+  width: 80rpx;
+}
+

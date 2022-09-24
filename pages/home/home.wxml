@@ -9,32 +9,31 @@
 <view class="header">
   <navigator class="headerItem" url="/pages/musicList/musicList">
     <view class="img">
-      <image src="/static/icon/home.png" mode="widthFix"></image>
+      <image src="/static/homeicon/home.png" mode="widthFix"></image>
     </view>
-
     <text>每日推荐</text>
+  </navigator>
+  <navigator url="/pages/musicCategories/musicCategories" class="headerItem">
+    <view class="img">
+      <image src="/static/homeicon/music-list.png" mode="widthFix"></image>
+    </view>
+    <text>歌单</text>
+  </navigator>
+  <navigator class="headerItem">
+    <view class="img">
+      <image src="/static/homeicon/排行榜.png" mode="widthFix"></image>
+    </view>
+    <text>排行榜</text>
   </navigator>
   <view class="headerItem">
     <view class="img">
-      <image src="/static/icon/music-list.png" mode="widthFix"></image>
-    </view>
-    <text>歌单</text>
-  </view>
-  <view class="headerItem">
-    <view class="img">
-      <image src="/static/icon/排行榜.png" mode="widthFix"></image>
-    </view>
-    <text>排行榜</text>
-  </view>
-  <view class="headerItem">
-    <view class="img">
-      <image src="/static/icon/电台.png" mode="widthFix"></image>
+      <image src="/static/homeicon/电台.png" mode="widthFix"></image>
     </view>
     <text>电台</text>
   </view>
   <view class="headerItem">
     <view class="img">
-      <image src="/static/icon/直播.png" mode="widthFix"></image>
+      <image src="/static/homeicon/直播.png" mode="widthFix"></image>
     </view>
     <text>直播</text>
   </view>

@@ -1,0 +1,21 @@
+<!--pages/musicCategories/musicCategories.wxml-->
+<view class="container">
+  <!-- 头部导航区 -->
+  <view class="header">
+    <scroll-view scroll-x enable-flex class="scroll">
+      <view class="scrollItem" wx:for="{{navTag}}" wx:key="id">
+        <view class="content {{currentId === item.id ?'active':''}}" 
+        bindtap="getCategoryName" 
+        data-name="{{item.name}}" 
+        id="{{item.id}}">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 展示区 -->
+  <scroll-view class="showList" scroll-y enable-flex>
+    <view wx:for="{{musicList}}" wx:key="id" class="showListItem">
+      <image src="{{item.coverImgUrl}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+</view>

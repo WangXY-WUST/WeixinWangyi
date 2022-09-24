@@ -1,0 +1,18 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "pubsub-js": "^1.9.4",
+    "throttle-debounce": "^5.0.0"
+  }
+}
